@@ -15,6 +15,15 @@ module.exports = {
 				plugin: require('@hapi/inert')
 			},
 			{
+				plugin: '@hapi/vision',
+				options: {
+					engines: {
+						hbs: require('handlebars')
+					},
+					path: Path.resolve(__dirname, 'views')
+				}
+			},
+			{
 				plugin: require('./employee')
 			},
 			{
@@ -22,6 +31,9 @@ module.exports = {
 			},
 			{
 				plugin: require('./signup')
+			},
+			{
+				plugin: require('./manager')
 			}
 		]
 	}
