@@ -20,11 +20,16 @@ module.exports = {
 					engines: {
 						hbs: require('handlebars')
 					},
-					path: Path.resolve(__dirname, 'views')
+					path: Path.resolve(__dirname, 'views'),
+					layout: true,
+					layoutPath: 'views/layouts'
 				}
 			},
 			{
-				plugin: require('./employee')
+				plugin: require('./employee'),
+				routes: {
+					prefix: '/employee'
+				}
 			},
 			{
 				plugin: require('./home')
