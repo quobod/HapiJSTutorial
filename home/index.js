@@ -3,13 +3,9 @@ const Joi = require('joi');
 exports.register = (server, options) => {
 	server.route({
 		method: [ 'GET' ],
-		path: '/{param?}',
-		handler: {
-			directory: {
-				path: '.',
-				redirectToSlash: true,
-				index: true
-			}
+		path: '/',
+		handler: (req, res) => {
+			return res.view('index', { title: 'Home' });
 		}
 	});
 };
