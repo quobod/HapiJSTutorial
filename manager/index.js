@@ -1,7 +1,7 @@
 exports.register = (server, options) => {
 	server.route({
 		method: 'GET',
-		path: '/manager',
+		path: '/',
 		handler: (req, res) => {
 			return res.view('manager', { title: 'Manager' });
 		}

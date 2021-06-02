@@ -33,7 +33,10 @@ module.exports = {
 				plugin: require('./signup')
 			},
 			{
-				plugin: require('./manager')
+				plugin: require('./manager'),
+				routes: {
+					prefix: '/manager'
+				}
 			}
 		]
 	}
