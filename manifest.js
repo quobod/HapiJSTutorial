@@ -19,6 +19,9 @@ module.exports = {
 			},
 			{
 				plugin: require('./home')
+			},
+			{
+				plugin: require('./signup')
 			}
 		]
 	}
