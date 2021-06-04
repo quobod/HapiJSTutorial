@@ -18,7 +18,7 @@ module.exports = {
 				plugin: '@hapi/vision',
 				options: {
 					engines: {
-						hbs: require('handlebars')
+						html: require('handlebars')
 					},
 					path: Path.resolve(__dirname, 'views'),
 					layout: true,
