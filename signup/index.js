@@ -2,6 +2,14 @@ const Joi = require('joi');
 
 exports.register = (server, options) => {
 	server.route({
+		method: 'GET',
+		path: '/signup',
+		handler: (req, res) => {
+			return res.view('signup', { title: 'Sign Up' });
+		}
+	});
+
+	server.route({
 		method: [ 'POST' ],
 		path: '/signup',
 		config: {
