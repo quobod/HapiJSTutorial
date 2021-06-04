@@ -20,12 +20,13 @@ exports.register = (server, options) => {
 					pwd2: Joi.string().valid(Joi.ref('pwd1')).label("Passwords don't match").required()
 				}),
 				failAction: (req, res, err) => {
+					console.log(err);
 					throw err;
 				}
 			}
 		},
 		handler: (req, res) => {
-			return req.payload;
+			return res.redirect('/');
 		}
 	});
 };
